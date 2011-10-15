@@ -22,7 +22,7 @@
   )
 
 (defun org-export-hatena-replace-one-line ()
-  "1行の記法を置き換える．"
+  "1行の記法を置換する．"
   (org-export-hatena-replace-1st-level)
   ;(org-export-hatena-replace-2nd-level)
   ;(org-export-hatena-replace-3rd-level)
@@ -38,7 +38,7 @@
       (replace-match "[\\1:title=\\3]"))))
 
 (defun org-export-hatena-replace-1st-level ()
-  "section 部分をはてな記法に置き換える．"
+  "1レベルのヘッドラインをはてな記法に置換する．"
   ;; replace section
   (goto-char (point-min))
   (while (re-search-forward org-export-hatena-notation-1st-level nil t)
